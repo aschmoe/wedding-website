@@ -1,9 +1,99 @@
-@media screen and (max-width: 767px) {
-  #site-head .vertical {
-    vertical-align: top; } }
+.fixed-nav {
+  display: none !important; }
+
+/* Big cover image on the home page */
+#site-head {
+  border-bottom: 10px solid #8B2B24; }
+  #site-head h1 {
+    color: #532824;
+    mix-blend-mode: hard-light; }
+  #site-head .first {
+    text-transform: uppercase;
+    font-size: 1.56em;
+    line-height: 1.2em; }
+  #site-head .second {
+    font-size: 1.25em;
+    line-height: 1.1em;
+    font-family: "PT Serif", serif;
+    text-transform: uppercase; }
+  #site-head .third {
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1.2em; }
+  #site-head .fourth {
+    line-height: 1.1em;
+    font-size: 1.25em;
+    font-family: "PT Serif", serif;
+    text-transform: uppercase; }
+
+#olga-image, #alex-image {
+  mix-blend-mode: hard-light;
+  position: absolute;
+  bottom: 0;
+  width: auto;
+  max-height: 55%; }
+
+#olga-image {
+  right: -12%; }
+
+#alex-image {
+  left: -12%; }
+
+@media screen and (max-width: 991px) {
+  #site-head {
+    height: 75%;
+    padding-bottom: 62%;
+    padding-top: 0; }
+    #site-head .vertical {
+      vertical-align: top; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #site-head {
+    height: 70%;
+    padding-top: 0;
+    padding-bottom: 40%; }
+  #olga-image, #alex-image {
+    max-height: 60%; }
+  #olga-image {
+    right: -5%; }
+  #alex-image {
+    left: -2%; } }
+
+@media screen and (min-width: 992px) {
+  #olga-image, #alex-image {
+    max-height: 100%; }
+  /* Big cover image on the home page */
+  #site-head {
+    height: 80%; }
+  #olga-image {
+    right: -20%; }
+  #alex-image {
+    left: -17%; } }
+
+@media screen and (min-width: 1280px) {
+  #olga-image {
+    right: -10%; }
+  #alex-image {
+    left: -8%; } }
+
+@media screen and (min-width: 1520px) {
+  #olga-image {
+    right: -1%; }
+  #alex-image {
+    left: 0%; } }
 
 .tag-details .post-header {
   display: none; }
+
+.post-holder {
+  width: 100%;
+  height: 100%;
+  background: #f2efe8;
+  position: relative; }
+
+.post-holder.odd {
+  background: #444;
+  color: white; }
 
 .site-footer {
   background: #8B2B24; }
@@ -47,7 +137,7 @@
       padding: 50px; } }
 
 .flourish {
-  background-color: #B4692F;
+  background-color: #532824;
   -webkit-mask: url(../images/adaptive-border.svg) no-repeat 100% 100%;
   mask: url(../images/adaptive-border.svg) no-repeat 100% 100%;
   height: 76px;
