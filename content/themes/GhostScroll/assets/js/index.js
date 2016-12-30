@@ -118,6 +118,34 @@ var $sitehead = $('#site-head');
 			}
 		}
 	});
+
+	function thanksForm() {
+		var label = $('#bartend > .form-label:first-child');
+		label.siblings().hide();
+		label.after('<p>Thanks for your input!</p>');
+	}
 	
+	$('#bartend-submit').click(function(e) {
+		console.log('yolo');
+		var var1 = $('input[name="optionsRadios"]').val(),
+		    var2 = $('textarea[name="message"]').val();
+		e.preventDefault();
+		$.ajax({
+        url: "https://script.google.com/macros/s/AKfycbwL5Qrk35H76B4RJK0OQO5yzI0ZEFqk8uCauTTopyyB1hT-fWw/exec",
+        data: {"Sign up for a 30 minute shift as bartender with a partner?" : var1, "Comments" : var2 },
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+            0: function (){
+            	thanksForm();
+                //Success message
+            },
+            200: function (){
+               thanksForm();
+                //Success Message
+            }
+        }
+    });
+	});
 
 }(jQuery));

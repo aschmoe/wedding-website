@@ -165,6 +165,12 @@ h6 {
     font-size: 2rem;
 }
 
+label.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 a {
     color: inherit;
     transition: all ease 0.3s;
@@ -932,11 +938,6 @@ a.fn-item.active {
         background-position-y: 50%;
     }
 
-    .blog-title {
-        font-size: 4rem;
-        letter-spacing: -1px;
-    }
-
     .blog-description {
         font-size: 1.7rem;
         line-height: 1.5em;
@@ -1016,10 +1017,6 @@ a.fn-item.active {
     }
     a.btn {
         margin-top: 10px;
-    }
-
-    .blog-title {
-        font-size: 3rem;
     }
 
     .blog-description {

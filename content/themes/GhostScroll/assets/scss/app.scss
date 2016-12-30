@@ -40,33 +40,84 @@
   }
 }
 
+.blog-title {
+    font-size: 3rem;
+}
+
 #olga-image, #alex-image {
   mix-blend-mode: hard-light;
   position: absolute;
   bottom: 0;
   width: auto;
-  max-height: 55%;
 }
 
 #olga-image {
-  right: -12%;
+  right: 50%;
+  margin-right: -251px;
+  max-height: 55%;
 }
 
 #alex-image {
-  left: -12%;
+  left: 50%;
+  margin-left: -300px;
+  max-height: 58%;
 }
 
-// @includ respond($xs-only) {
-//   #site-head {
-//     height: 75%;
-//     padding-bottom: 62%;
-//   }
-// }
+@media screen and  (min-width: 401px) {
+  #olga-image {
+    margin-right: -271px;
+  }
+
+  #alex-image {
+    margin-left: -320px;
+  }
+}
+
+@media screen and (max-width: #{$screen-xs}) {
+  #site-head {
+    height: 580px;
+  }
+}
+
+
+@media screen and (min-width: #{$screen-xs + 1}) {
+  #site-head {
+    height: 700px;
+  }
+
+  #olga-image {
+    margin-right: 0;
+    right: -12%;
+  }
+
+  #alex-image {
+    margin-left: 0;
+    left: -26.5%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .blog-title {
+    font-size: 4rem;
+    letter-spacing: -1px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  #olga-image {
+    right: -8%;
+  }
+
+  #alex-image {
+    left: -18%;
+  }
+}
+
 
 @include respond($sm-and-down) {
   #site-head {
-    height: 75%;
-    padding-bottom: 62%;
+    padding-bottom: 333px;
     padding-top: 0;
 
     .vertical {
@@ -77,7 +128,6 @@
 
 @include respond($sm-only) {
   #site-head {
-    height: 70%;
     padding-top: 0;
     padding-bottom: 40%;
   }
@@ -91,9 +141,15 @@
   }
 
   #alex-image {
-    left: -2%;
+    left: -9%;
   }
 
+}
+
+@include respond($sm-up) {
+  #site-head {
+    height: 750px;
+  }
 }
 
 @include respond($md-up) {
@@ -102,36 +158,54 @@
   }
 
   /* Big cover image on the home page */
-  #site-head {
-    height: 80%;
-  }
+  // #site-head {
+  //   height: 80%;
+  // }
 
   #olga-image {
     right: -20%;
   }
 
   #alex-image {
-    left: -17%;
+    left: -31%;
   }
 }
 
-@include respond($lg-up) {
+@media screen and (min-width: 1100px) {
   #olga-image {
-    right: -10%;
+    right: -14%;
   }
 
   #alex-image {
-    left: -8%;
+    left: -23%;
+  }
+}
+
+
+@include respond($lg-up) {
+  #olga-image {
+    right: 50%;
+    left: auto;
+    margin-right: -780px;
+  }
+
+  #alex-image {
+    right: auto;
+    left: 50%;
+    margin-left: -870px;
   }
 }
 
 @include respond($xl-up) {
   #olga-image {
-    right: -1%;
+    margin-right: -874px;
   }
 
   #alex-image {
-    left: 0%;
+    margin-left: -970px;
+  }
+  .blog-title {
+    font-size: 5rem;
   }
 }
 
@@ -163,6 +237,25 @@
 }
 
 // Components
+
+form {
+  text-align: left;
+  padding-bottom: 50px;
+
+  textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn {
+    background-color: $gray-dark;
+
+    &:hover {
+      background-color: darken($gray-dark, 10%);
+    }
+  }
+}
 
 .card {
   position: relative;
