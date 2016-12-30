@@ -5,7 +5,9 @@
 #site-head {
   border-bottom: 10px solid #8B2B24;
   background: white;
-  background-size: cover; }
+  background-size: cover;
+  max-width: 100%;
+  overflow: hidden; }
   #site-head h1 {
     color: #532824;
     mix-blend-mode: hard-light; }

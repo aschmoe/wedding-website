@@ -13,6 +13,8 @@
   border-bottom: 10px solid $red;
   background: white;
   background-size: cover;
+  max-width: 100%;
+  overflow: hidden;
 
   h1 {
     color: $red-darkest;
