@@ -3,7 +3,8 @@
 
 /* Big cover image on the home page */
 #site-head {
-  border-bottom: 10px solid #8B2B24; }
+  border-bottom: 10px solid #8B2B24;
+  background: white; }
   #site-head h1 {
     color: #532824;
     mix-blend-mode: hard-light; }

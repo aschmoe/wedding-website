@@ -11,6 +11,7 @@
 /* Big cover image on the home page */
 #site-head {
   border-bottom: 10px solid $red;
+  background: white;
 
   h1 {
     color: $red-darkest;
@@ -212,6 +213,12 @@
 
 
 // Posts
+
+.post.first {
+  .post-title {
+    display: none;
+  }
+}
 
 .tag-details {
   .post-header {
