@@ -61,7 +61,7 @@ var $sitehead = $('#site-head');
 		});
 
 		$('.post.last').next('.post-after').hide();
-		if($sitehead.length) { 
+		if(false && $sitehead.length) { 
 			$(window).scroll( function () {
 				var w = $(window).scrollTop();
 				var g = $sitehead.offset().top;
