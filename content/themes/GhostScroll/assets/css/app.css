@@ -3,14 +3,16 @@
 
 /* Big cover image on the home page */
 #site-head {
-  border-bottom: 10px solid #8B2B24;
+  border-bottom: 10px solid #416176;
   background: white;
   background-size: cover;
   max-width: 100%;
   overflow: hidden; }
-  #site-head h1 {
-    color: #532824;
-    mix-blend-mode: hard-light; }
+  #site-head #header-arrow {
+    z-index: 1; }
+  #site-head #header-arrow, #site-head h1 {
+    color: #002E4C;
+    opacity: 0.7; }
   #site-head .first {
     text-transform: uppercase;
     font-size: 1.56em;
@@ -34,7 +36,6 @@
   font-size: 3rem; }
 
 #olga-image, #alex-image {
-  mix-blend-mode: hard-light;
   position: absolute;
   bottom: 0;
   width: auto; }
@@ -148,11 +149,11 @@
   position: relative; }
 
 .post-holder.odd {
-  background: #444;
+  background: #416176;
   color: white; }
 
 .site-footer {
-  background: #8B2B24; }
+  background: #444; }
 
 form {
   text-align: left;
@@ -172,10 +173,9 @@ form {
   padding: 30px;
   margin: 0 auto 30px;
   background-color: #fff;
-  box-shadow: 0 0 1px rgba(180, 105, 47, 0.2), inset 0 0 20px rgba(180, 105, 47, 0.05);
   text-align: center; }
   .card h3 {
-    color: #532824;
+    color: #555;
     text-transform: uppercase; }
   .card:before, .card:after {
     position: absolute;
@@ -205,7 +205,7 @@ form {
       padding: 50px; } }
 
 .flourish {
-  background-color: #532824;
+  background-color: #416176;
   -webkit-mask: url(../images/adaptive-border.svg) no-repeat 100% 100%;
   mask: url(../images/adaptive-border.svg) no-repeat 100% 100%;
   height: 76px;
