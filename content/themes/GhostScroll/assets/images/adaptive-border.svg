@@ -1,10 +1,10 @@
 <svg x="0%" y="0%" width="100%" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
   <style>
-  	path { fill: #D0BB6C; }
-  	polygon { fill: #D0BB6C; }
-  	.line { fill: #D0BB6C; }
-  	#corner rect { fill: #D0BB6C; }
+  	path { fill: #416176; }
+  	polygon { fill: #416176; }
+  	.line { fill: #416176; }
+  	#corner rect { fill: #416176; }
     .sml,.med,.lrg { visibility: hidden; }
 
 		@media screen and (min-width: 200px){
