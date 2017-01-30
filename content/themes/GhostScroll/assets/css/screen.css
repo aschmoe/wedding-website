@@ -73,8 +73,8 @@ html {
 body {
   height: 100%;
   max-height: 100%;
-  /*font-family: 'Droid Serif', serif;*/
-  font-family: "PT Serif", serif;
+  font-family: "baskerville-urw", serif;
+  font-weight: 500;
   font-size: 2.0rem;
   line-height: 1.6em;
   color: #555; }
@@ -105,15 +105,16 @@ h1, h2, h3,
 h4, h5, h6 {
   text-rendering: optimizeLegibility;
   line-height: 1;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Oswald", sans-serif; }
+  font-family: "baskerville-urw", serif; }
 
 h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   line-height: 120%;
   margin-top: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "baskerville-urw", serif;
   margin-bottom: 0%; }
 
 h1 {
@@ -142,7 +143,8 @@ h6 {
 
 label.form-label {
   display: block;
-  font-weight: bold;
+  font-weight: 500;
+  font-style: italic;
   margin-bottom: 10px; }
 
 a {
@@ -169,9 +171,7 @@ a.btn {
   position: relative;
   margin-top: 2rem;
   cursor: pointer;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-weight: lighter; }
+  font-weight: 500; }
 
 a.btn:hover {
   background: #86c440; }
@@ -218,7 +218,7 @@ blockquote {
   margin: 1.0em 0 1.0em -2.2em;
   padding: 0 0 0 1.0em;
   /*border-left: #4a4a4a 0.4em solid;*/
-  font-weight: lighter; }
+  font-weight: 500; }
 
 blockquote p {
   margin: 0.8em 0; }
@@ -239,7 +239,7 @@ blockquote small:before {
   content: '\2014 \00A0'; }
 
 blockquote cite {
-  font-weight: bold; }
+  font-weight: 500; }
 
 blockquote cite a {
   font-weight: normal; }
@@ -255,7 +255,7 @@ dl dt {
   text-align: right;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 1em; }
 
 dl dd {
@@ -424,8 +424,8 @@ ul li {
   margin: 0;
   font-size: 1.8rem;
   line-height: 1.5em;
-  font-weight: 300;
-  font-family: "PT Serif", serif;
+  font-weight: 500;
+  font-family: "baskerville-urw", serif;
   letter-spacing: 0; }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -449,11 +449,10 @@ ul li {
   top: 40px;
   left: 2%;
   z-index: 99999;
-  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   font-size: 1.5rem;
   line-height: 130%;
-  font-weight: bold; }
+  font-weight: 500; }
 
 a.fn-item {
   display: block;
@@ -499,7 +498,7 @@ a.fn-item.active {
 .post-meta {
   display: inline-block;
   margin: 0 0 5px 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "baskerville-urw", serif;
   font-size: 1.5rem;
   color: #9EABB3; }
 
@@ -521,8 +520,7 @@ a.fn-item.active {
   left: 0; }
 
 .user-name {
-  display: block;
-  font-weight: bold; }
+  display: block; }
 
 .user-bio {
   display: block;
@@ -538,8 +536,7 @@ a.fn-item.active {
   text-align: right; }
 
 .publish-heading {
-  display: block;
-  font-weight: bold; }
+  display: block; }
 
 .publish-date {
   display: block;
@@ -629,7 +626,7 @@ a.fn-item.active {
   width: 80%;
   max-width: 700px;
   margin: 4rem auto;
-  font-family: "Oswald", sans-serif;
+  font-family: "baskerville-urw", serif;
   font-size: 1.3rem;
   color: #9EABB3;
   text-align: center; }
@@ -669,7 +666,7 @@ a.fn-item.active {
   position: relative;
   margin: 0rem 0 0 0;
   padding: 1rem 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "baskerville-urw", serif;
   font-size: 1.3rem;
   line-height: 1.5em;
   color: #BBC7CC;
@@ -684,7 +681,6 @@ a.fn-item.active {
   color: #50585D; }
 
 .poweredby .i-ghost {
-  font-weight: 700;
   text-decoration: none; }
 
 .poweredby .i-ghost:hover {
@@ -716,7 +712,6 @@ a.fn-item.active {
   position: absolute;
   top: 2px;
   left: 9px;
-  font-weight: bold;
   transition: color 0.5s ease; }
 
 /* Add a box shadow to on hover */
@@ -737,7 +732,6 @@ a.fn-item.active {
   left: -23px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.1rem;
-  font-weight: bold;
   line-height: 1em;
   text-align: center;
   background: #50585D;

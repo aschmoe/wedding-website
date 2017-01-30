@@ -90,8 +90,8 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    /*font-family: 'Droid Serif', serif;*/
-    font-family: $font-pt;
+    font-family: $font-basker;
+    font-weight: $font-weight-normal;
     font-size: 2.0rem;
     line-height: 1.6em;
     color: $text;
@@ -123,15 +123,16 @@ h1, h2, h3,
 h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
+    font-weight: $font-weight-normal;
     margin-top: 0;
     margin-bottom: 10px;
-    font-family: $font-oswald;
+    font-family: $font-basker;
 }
 h3, h4, h5, h6 {
     text-rendering: optimizeLegibility;
     line-height: 120%;
     margin-top: 0;
-    font-family: $font-oswald;
+    font-family: $font-basker;
     margin-bottom: 0%;
 }
 
@@ -167,7 +168,8 @@ h6 {
 
 label.form-label {
     display: block;
-    font-weight: bold;
+    font-weight: $font-weight-normal;
+    font-style: italic;
     margin-bottom: 10px;
 }
 
@@ -198,9 +200,7 @@ a.btn {
     position: relative;
     margin-top: 2rem;
     cursor: pointer;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-weight: lighter;
+    font-weight: $font-weight-normal;
 
 }
 
@@ -256,7 +256,7 @@ blockquote {
     margin: 1.0em 0 1.0em -2.2em;
     padding: 0 0 0 1.0em;
     /*border-left: #4a4a4a 0.4em solid;*/
-    font-weight: lighter;
+    font-weight: $font-weight-normal;
 }
 
 blockquote p {
@@ -279,7 +279,7 @@ blockquote small {
 blockquote small:before { content: '\2014 \00A0'; }
 
 blockquote cite {
-    font-weight:bold;
+    font-weight:$font-weight-normal;
 }
 
 blockquote cite a { font-weight: normal; }
@@ -297,7 +297,7 @@ dl dt {
     text-align: right;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: bold;
+    font-weight: $font-weight-normal;
     margin-bottom: 1em
 }
 
@@ -499,8 +499,8 @@ ul li {
     margin: 0;
     font-size: 1.8rem;
     line-height: 1.5em;
-    font-weight: 300;
-    font-family: $font-pt;
+    font-weight: $font-weight-normal;
+    font-family: $font-basker;
     letter-spacing: 0;
 }
 
@@ -528,11 +528,10 @@ ul li {
     top: 40px;
     left: 2%;
     z-index: 99999;
-    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 130%;
-    font-weight: bold;
+    font-weight: $font-weight-normal;
 }
 a.fn-item {
     display: block;
@@ -584,7 +583,7 @@ a.fn-item.active {
 .post-meta {
     display: inline-block;
     margin: 0 0 5px 0;
-    font-family: $font-oswald;
+    font-family: $font-basker;
     font-size: 1.5rem;
     color: #9EABB3;
 }
@@ -612,7 +611,6 @@ a.fn-item.active {
 
 .user-name {
     display: block;
-    font-weight: bold;
 }
 
 .user-bio {
@@ -632,7 +630,6 @@ a.fn-item.active {
 
 .publish-heading {
     display: block;
-    font-weight: bold;
 }
 
 .publish-date {
@@ -743,7 +740,7 @@ a.fn-item.active {
     width: 80%;
     max-width: 700px;
     margin: 4rem auto;
-    font-family: $font-oswald;
+    font-family: $font-basker;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
@@ -792,7 +789,7 @@ a.fn-item.active {
     position: relative;
     margin: 0rem 0 0 0;
     padding: 1rem 0;
-    font-family: $font-oswald;
+    font-family: $font-basker;
     font-size: 1.3rem;
     line-height: 1.5em;
     color: #BBC7CC;
@@ -810,7 +807,6 @@ a.fn-item.active {
 }
 
 .poweredby .i-ghost {
-    font-weight: 700;
     text-decoration: none;
 }
 
@@ -846,7 +842,6 @@ a.fn-item.active {
     position: absolute;
     top: 2px;
     left: 9px;
-    font-weight: bold;
     transition: color 0.5s ease;
 }
 
@@ -870,7 +865,6 @@ a.fn-item.active {
     left: -23px;
     color: rgba(255,255,255,0.9);
     font-size: 1.1rem;
-    font-weight: bold;
     line-height: 1em;
     text-align: center;
     background: #50585D;
