@@ -47,34 +47,38 @@ var $sitehead = $('#site-head');
 		$('.post-title').each(function () {
 			var t = $(this).text();
 			var index = $(this).parents('.post-holder').index();
-			$fnav.append("<a class='fn-item' item_index='"+index+"'>"+t+"</a>")
-			$(this).parents('article').attr('id',t.toLowerCase().split(' ').join('-'));
-			$('.fn-item').click(function () {
+			var $nav = $("<a href='#' class='fn-item' item_index='"+index+"'>"+t+"</a>");
+			$fnav.append($nav);
+			$(this).parents('article').attr('id',t.toLowerCase().split(' ').join('-')).attr('item_index', index);
+			$nav.click(function (e) {
+				e.preventDefault();
 				var i = $(this).attr('item_index');
 				var s = $(".post[item_index='"+i+"']");
 
 				$('html, body').animate({
 					scrollTop: s.offset().top
-				}, 400);
+				}, 200, function() {
+					console.log('done');
+				});
 
 			});
 		});
 
 		$('.post.last').next('.post-after').hide();
-		if(false && $sitehead.length) { 
+		if($sitehead.length) { 
 			$(window).scroll( function () {
 				var w = $(window).scrollTop();
 				var g = $sitehead.offset().top;
 				var h = $sitehead.offset().top + $sitehead.height()-100;
 				
-				var paralex = 30 + w/13 + "%";
-				$sitehead.css("background-position-y", paralex);
+				// var paralex = 30 + w/13 + "%";
+				// $sitehead.css("background-position-y", paralex);
 
-				if(w >= g && w<=h) {
-					$('.fixed-nav').fadeOut('fast');
-				} else if($(window).width()>500) {
-					$('.fixed-nav').fadeIn('fast');
-				}
+				// if(w >= g && w<=h) {
+				// 	$('.fixed-nav').fadeOut('fast');
+				// } else if($(window).width()>500) {
+				// 	$('.fixed-nav').fadeIn('fast');
+				// }
 
 				$post.each(function () {
 					var f = $(this).offset().top;
@@ -83,15 +87,13 @@ var $sitehead = $('#site-head');
 					var i = $(".fn-item[item_index='"+t+"']");
 					var a = $(this).parent('.post-holder').prev('.post-holder').find('.post-after');
 
-					$(this).attr('item_index', t);
-
-					if(w >= f && w<=b) {
-						i.addClass('active');
-						a.fadeOut('slow');
-					} else {
-						i.removeClass('active');
-						a.fadeIn('slow');
-					}
+					// if(w >= f && w<=b) {
+					// 	i.addClass('active');
+					// 	a.fadeOut('slow');
+					// } else {
+					// 	i.removeClass('active');
+					// 	a.fadeIn('slow');
+					// }
 				});
 			});
 		}
@@ -109,43 +111,43 @@ var $sitehead = $('#site-head');
 		//   }
 		// });
 
-		var blendImages = {
-			'backdrop': {
-				loaded: false,
-				src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/natural-paper-background-texture-hd-5a0b-2.jpg"
-			},
-			'alex-image': {
-				loaded: false,
-				src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/alex-cutout.png"
-			},
-			'olga-image': {
-				loaded: false,
-				src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/olga-cutout.png"
-			}
-		};
-		var run1 = false;
-		var imageLoaded = function() {
-			var key = this.attributes.id;
-			if(blendImages[key].canvas) {
-				return;
-			}
-			var canvas = document.createElement("canvas"),
-					ctx = canvas.getContext("2d");
-			canvas.width = this.width;
-	    canvas.height = this.height;
-	    ctx.drawImage( this, 0, 0 );
-	    var imgSrc = canvas.toDataURL("image/png");
-	    // localStorage.setItem( key, imgSrc );
-	    blendImages[key].image.src =  imgSrc;
-      blendImages[key].loaded = true;
-      blendImages[key].canvas = canvas;
-      if(blendImages['backdrop'].loaded && blendImages['alex-image'].loaded && blendImages['olga-image'].loaded) {
-      	var $backdrop = $(blendImages['backdrop'].canvas); 
-      	$('#site-head-content').append($backdrop);
-      	// $backdrop.blendmode({'mode' : 'hardlight', 'object' : $(blendImages['alex-image'].image), 'scaletofit' : false});
-      	run1 = true;
-      }
-    };
+		// var blendImages = {
+		// 	'backdrop': {
+		// 		loaded: false,
+		// 		src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/natural-paper-background-texture-hd-5a0b-2.jpg"
+		// 	},
+		// 	'alex-image': {
+		// 		loaded: false,
+		// 		src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/alex-cutout.png"
+		// 	},
+		// 	'olga-image': {
+		// 		loaded: false,
+		// 		src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/olga-cutout.png"
+		// 	}
+		// };
+		// var run1 = false;
+		// var imageLoaded = function() {
+		// 	var key = this.attributes.id;
+		// 	if(blendImages[key].canvas) {
+		// 		return;
+		// 	}
+		// 	var canvas = document.createElement("canvas"),
+		// 			ctx = canvas.getContext("2d");
+		// 	canvas.width = this.width;
+	 //    canvas.height = this.height;
+	 //    ctx.drawImage( this, 0, 0 );
+	 //    var imgSrc = canvas.toDataURL("image/png");
+	 //    // localStorage.setItem( key, imgSrc );
+	 //    blendImages[key].image.src =  imgSrc;
+  //     blendImages[key].loaded = true;
+  //     blendImages[key].canvas = canvas;
+  //     if(blendImages['backdrop'].loaded && blendImages['alex-image'].loaded && blendImages['olga-image'].loaded) {
+  //     	var $backdrop = $(blendImages['backdrop'].canvas); 
+  //     	$('#site-head-content').append($backdrop);
+  //     	// $backdrop.blendmode({'mode' : 'hardlight', 'object' : $(blendImages['alex-image'].image), 'scaletofit' : false});
+  //     	run1 = true;
+  //     }
+  //   };
    //  Object.keys(blendImages).map(function(key) {
 			// var tmpImg = new Image();
 			// tmpImg.crossOrigin = "Anonymous";

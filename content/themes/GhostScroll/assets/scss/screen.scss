@@ -406,8 +406,20 @@ table.plain {
     }
 }
 
+ul {
+    padding-left: 10px;
+}
+
+ol {
+    padding-left: 15px;
+}
+
 li {
-  margin-left: 30px;
+    margin-left: 23px;
+}
+
+ol > li {
+  margin-left: 18px;
 }
 
 ul li {
@@ -521,23 +533,11 @@ ul li {
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 
-.fixed-nav {
-    display: none;
-    opacity: 1;
-    position: fixed;
-    top: 40px;
-    left: 2%;
-    z-index: 99999;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    line-height: 130%;
-    font-weight: $font-weight-normal;
-}
-a.fn-item {
-    display: block;
-    cursor: pointer;
-    opacity: 0.7;
-}
+// a.fn-item {
+//     display: block;
+//     cursor: pointer;
+//     opacity: 0.7;
+// }
 .white {
     color: white;
 }
@@ -900,21 +900,21 @@ a.fn-item.active {
    ========================================================================== */
 
 @media only screen and (max-width: 1130px) {
-    .fixed-nav {
-        opacity: 1;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        z-index: 99999;
-        background: #f2efe8;
-        width: 100%;
-        text-align: center;
-        padding: 4px;
-    }
-    a.fn-item {
-        display: inline;
-        margin-left: 10px;
-    }
+    // .fixed-nav {
+    //     opacity: 1;
+    //     position: fixed;
+    //     top: 0px;
+    //     left: 0px;
+    //     z-index: 99999;
+    //     background: #f2efe8;
+    //     width: 100%;
+    //     text-align: center;
+    //     padding: 4px;
+    // }
+    // a.fn-item {
+    //     display: inline;
+    //     margin-left: 10px;
+    // }
     blockquote {
         margin-left: 0;
     }
