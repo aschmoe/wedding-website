@@ -1,3 +1,6 @@
+.fixed-nav {
+  display: none; }
+
 /* Big cover image on the home page */
 #site-head {
   border-bottom: 10px solid #416176;
@@ -51,10 +54,11 @@
   #alex-image {
     margin-left: -320px; } }
 
-@media only screen and (min-width: 501px) {
+@media only screen and (min-width: 650px) {
   body {
     padding-top: 35px; }
   .fixed-nav {
+    display: block;
     box-sizing: border-box;
     opacity: 1;
     position: fixed;
