@@ -2,6 +2,82 @@
 @import "bourbon-loader";
 @import "vars";
 
+
+// Form
+
+
+input[type="text"],
+textarea {
+  padding: 2px 5px;
+  box-sizing: border-box;
+}
+
+.checkboxes > label:first-child,
+.switch-text {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.checkboxes > label:first-child {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.switch-text {
+  margin-top: 8px;
+}
+
+.checkboxes {
+  margin-bottom: 15px;
+}
+
+.plus-one {
+  margin-bottom: 15px;
+
+  label {
+    font-style: italic;
+    opacity: 0.9;
+  }
+}
+
+.guest {
+  padding: 5px 20px;
+}
+
+p.form-alert {
+  margin-top: 5px;
+}
+
+#rsvp {
+  position: relative;
+
+  &.posting {
+    &:before {
+      display: block;
+    }
+  }
+
+  &:before {
+    background: #fff;
+    content: '';
+    display: none;
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+  }
+
+  max-width: 400px;
+  margin: 0 auto;
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
 // Header
 
 // .fixed-nav {

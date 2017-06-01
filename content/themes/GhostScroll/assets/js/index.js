@@ -101,64 +101,6 @@ var $sitehead = $('#site-head');
 		$('ul li').before('<span class="bult fa fa-asterisk icon-asterisk"></span>');
 		$('blockquote p').prepend('<span class="quo icon-quote-left"></span>');
 		$('blockquote p').append('<span class="quo icon-quote-right"></span>');
-
-		// Blend 'em
-		// $('#backdrop').one('load', function() {
-		//   // do stuff
-		// }).each(function() {
-		//   if(this.complete) {
-		//   	
-		//   }
-		// });
-
-		// var blendImages = {
-		// 	'backdrop': {
-		// 		loaded: false,
-		// 		src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/natural-paper-background-texture-hd-5a0b-2.jpg"
-		// 	},
-		// 	'alex-image': {
-		// 		loaded: false,
-		// 		src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/alex-cutout.png"
-		// 	},
-		// 	'olga-image': {
-		// 		loaded: false,
-		// 		src: "https://s3-us-west-2.amazonaws.com/schmolga-wedding/olga-cutout.png"
-		// 	}
-		// };
-		// var run1 = false;
-		// var imageLoaded = function() {
-		// 	var key = this.attributes.id;
-		// 	if(blendImages[key].canvas) {
-		// 		return;
-		// 	}
-		// 	var canvas = document.createElement("canvas"),
-		// 			ctx = canvas.getContext("2d");
-		// 	canvas.width = this.width;
-	 //    canvas.height = this.height;
-	 //    ctx.drawImage( this, 0, 0 );
-	 //    var imgSrc = canvas.toDataURL("image/png");
-	 //    // localStorage.setItem( key, imgSrc );
-	 //    blendImages[key].image.src =  imgSrc;
-  //     blendImages[key].loaded = true;
-  //     blendImages[key].canvas = canvas;
-  //     if(blendImages['backdrop'].loaded && blendImages['alex-image'].loaded && blendImages['olga-image'].loaded) {
-  //     	var $backdrop = $(blendImages['backdrop'].canvas); 
-  //     	$('#site-head-content').append($backdrop);
-  //     	// $backdrop.blendmode({'mode' : 'hardlight', 'object' : $(blendImages['alex-image'].image), 'scaletofit' : false});
-  //     	run1 = true;
-  //     }
-  //   };
-   //  Object.keys(blendImages).map(function(key) {
-			// var tmpImg = new Image();
-			// tmpImg.crossOrigin = "Anonymous";
-   //    tmpImg.onload = imageLoaded;
-   //    tmpImg.attributes.id = key;
-   //    tmpImg.src = blendImages[key].src;
-   //    blendImages[key].image = tmpImg;
-   //  })
-    
-// }) ;
-		// $('#sourceimage').blendmode({'mode' : modePresets.options[i].value, 'object' : $('#blendimage'), 'scaletofit' : scale});
 	});
 	
 	$post.each(function () {
@@ -179,77 +121,280 @@ var $sitehead = $('#site-head');
 		}
 	});
 
-	// // SVGs
- //  var imgURL = 'https://s3-us-west-2.amazonaws.com/schmolga-wedding/adaptive-border.svg';
- //  $.get(imgURL, function(data) {
- //  	$('.flourish').each(function(){
- //    	var $img = $(this);
- //      // Get the SVG tag, ignore the rest
- //      var $svg = $(data).find('svg');
- //      // Remove any invalid XML tags as per http://validator.w3.org
- //      $svg = $svg.removeAttr('xmlns:a');
- //      // Replace image with new SVG
- //      $img.append($svg);
- //     });
- //  }, 'xml');
+	var options = [
+	  'Oksana Ostrovsky',
+	  'Sebastian Ostrovsky',
+	  'Idris Ostrovsky',
+	  'Misha Ostrovsky',
+	  'Andrew Ostrovsky',
+	  'Mikhail Korol',
+	  'Irina Martyanova, Andrew Martyanov, Andrew Martyanov Jr.',
+	  'Cathe Muller',
+	  'Maria Bush, Tony Bush',
+	  'Iryna Larson, Paul Newgard',
+	  'Kathy Sanford, Paul Eyestone',
+	  'Dmitri Gerasimenko, Jan Adams',
+	  'Irina Dobry, Yasha Muchnik',
+	  'Yelena Karpuk, Petr Karpuk',
+	  'Oksana Shklyanka, Andreas Schmidt',
+	  'Linda Sleeper',
+	  'Marina Fosnes, Kent Fosnes',
+	  'Marina Shipova, Noel Price',
+	  'Natalia Ross, Roger Ross',
+	  'Sarah Winfield, Jesse Winfield',
+	  'Julia Goudie, Denny Goudie',
+	  'Ludmila Holmquist, Karl Holmquist',
+	  'Anya Talis',
+	  'Alex Belokon, Irena Belokon',
+	  'Leilani Wood',
+	  'Martha Willard, Tom Schmoe',
+	  'Jesse Willard, Alix Willard, Owen Willard, Conor Willard',
+	  'Ella Willard-Schmoe, Tim Lee',
+	  'Kathryn Willard, Chris Willard',
+	  'Meghann Wolvert, Lily Wolvert, Aurora Marie Wolvert, Brian Wolvert',
+	  'Colin Willard',
+	  'Steve Willard, Connie Demey',
+	  'Jake Willard, Melanie Lavin',
+	  'Sam Willard, Silvia Kovacsova',
+	  'Kate Carson, Bob Carson',
+	  'Amy Carson',
+	  'Jeremy Carson, Felix Carson',
+	  'Mike Schmoe, Teresa Schmoe',
+	  'Olivia Schmoe, Jon Knitter',
+	  'Sarah Schmoe, Mike Stearns',
+	  'MiSoon Schmoe',
+	  'Tomiko Schmoe',
+	  'Liz Wick, Morgan Schmoe, Matt Page',
+	  'Ruth Heft',
+	  'Rebecca Heft, Nick Reed',
+	  'Judy Rudolph',
+	  'Dave Rudolph, Colleen Pinckney',
+	  'Rick Bergdahl, Sarah Bergdahl',
+	  'Janis Pruitt-Hamm, Bruce Pruitt-Hamm',
+	  'Mia Arends, Michael Derning',
+	  'Tomiko Schmoe ',
+	  'Robin Lee Smith',
+	  'Julia Bell',
+	  'Noha Omar, Javier Tordable',
+	  'Sasha Martyanova, J.M. Latronico',
+	  'Elliot Watson, Grace Wandell',
+	  'Tim Hanlon, Ally Jurkovich',
+	  'Joey Roberts, Kate Roberts',
+	  'Dan Rogers, Emily Rogers',
+	  'Wes Foreman, Christina Hunsberger',
+	  'Scott Yee, Lacey Yee',
+	  'Jesse Berkowitz, Molly Wlodorzyk',
+	  'James Baring',
+	  'Christopher Goodman-Smith, Amanda Maud Jones',
+	  'Pete Benoit',
+	  'Charlie Parr, Jessica Rice',
+	  'Ford Kerr',
+	  'Heather Manley',
+	  'Mary Maloney, Shawn Maloney',
+	  'Connor Coombs',
+	  'Moriah Grey',
+	  'Ryan Schuster, Gaby Schuster',
+	  'Megan Reining, Franco Orihuela',
+	  'Katie Steffen, Mariano Hernandez Maza',
+	  'Ada Mares, Paul Graham',
+	  'Carmen Hare, Harold Hare',
+	  'Chelsea Maybee, Coleman Maybee',
+	  'Hailey Fox, Juan Camps',
+	  'Vann Brasher, Naomi Landig',
+	  'Holly Faulstich, Mike Parelskin',
+	  'Adena Compton, Calvin Compton',
+	  'Shane Fallon',
+	  'Kate Langton',
+	  'Jeff Lyon, Lisa Lyon',
+	  'Kevin Herman, Ellen McCormick',
+	  'Andrew Wade',
+	  'Ben York, Lydia D\'Antona',
+	  'Heather Catalano',
+	  'Alyna Rogow, Elliot Sanders',
+	  'Ashley Skoch',
+	  'Michele Frix, Noah Dassel',
+	  'Jones Parker, Lisa Beutler',
+	  'Alden Parker, Taryn Parker',
+	  'Rachael Seno',
+	  'Mike Ashton, Kristen Beard',
+	  'Larkin VanderHoef, Andrea Lino',
+	  'Alex Manno'
+	];
 
-  // Canvas background
-  
-  // <img id="olga-image" src="https://s3-us-west-2.amazonaws.com/schmolga-wedding/olga-cutout.png" />
-  // <img id="alex-image" src="https://s3-us-west-2.amazonaws.com/schmolga-wedding/alex-cutout.png" />
 
- //  var canvas = document.getElementById('canvas');
-	// var ctx = canvas.getContext('2d');
-	// var imgback = document.createElement('img');
-	// imgback.setAttribute('id', 'background');
-	// imgback.src = "https://s3-us-west-2.amazonaws.com/schmolga-wedding/natural-paper-background-texture-hd-5a0b-2.jpg";
-	// var imgalex = document.createElement('img');
-	// imgalex.setAttribute('id', 'alex-image');
-	// imgalex.src = 'https://s3-us-west-2.amazonaws.com/schmolga-wedding/alex-cutout.png';
-	// var imgolga = document.createElement('img');
-	// imgolga.setAttribute('id', 'olga-image');
-	// imgolga.src = 'https://s3-us-west-2.amazonaws.com/schmolga-wedding/olga-cutout.png';
+	var enterSearchMode = function($form, switchMode) {
+		$form.html('');
+		$form.off('submit');
 
-	// // ctx.globalCompositeOperation = 'source-over';
-	// ctx.globalCompositeOperation = 'hard-light';
-	// ctx.drawImage(imgback, 0, 0);
-	// ctx.drawImage(imgalex, 0, 0);
-	// ctx.drawImage(imgolga, 0, 0);
+		var self = this;
+		var $search = $('<input type="text" id="name-search" />');
 
-	function thanksForm() {
-		var label = $('#bartend > p:first-child');
-		label.siblings().hide();
-		label.after('<p>Thanks for the information, talk to you soon!</p>');
+		var searchSubmit = function(e) {
+			e.preventDefault();
+			$('.form-alert').remove();
+			var value = $search.val().toLowerCase();
+			if (value && value.length) {
+				var matches = options.filter(function(option) {
+					return option.toLowerCase().indexOf(value) !== -1;
+				});
+			}
+			if(!matches.length) {
+				$search.after('<p class="form-alert">Sorry couldn\'t find an invite like that</p>');
+			} else if(matches.length === 1) {
+				$form.off('submit');
+				switchMode($form, matches[0], enterSearchMode);
+			} else {
+				$search.after('<p class="form-alert">Woops, looks like there are a couple invites like that, try being more specific?</p>');
+			}
+		}
+
+		$form.on('submit', searchSubmit)
+
+		var $submit = $('<a href="#" id="rsvp-search" class="btn">Find RSVP</a>')
+			.on('click', searchSubmit);
+
+		$form
+			.append('<label class="form-label">Enter the name on your invitation.</label>')
+			.append($search)
+			.append($submit);
+
+		$search.wrap('<div></div>');
 	}
 
-	// //
-	$('#bartend-submit').click(function(e) {
-		var var1 = $('input[name="optionsRadios"]:checked').val(),
-		    var2 = $('textarea[name="message"]').val(),
-		    var3 = $('input[name="name"]').val(),
-		    var4 = $('textarea[name="address"]').val();
-		e.preventDefault();
-		$.ajax({
-        url: "https://script.google.com/macros/s/AKfycbwL5Qrk35H76B4RJK0OQO5yzI0ZEFqk8uCauTTopyyB1hT-fWw/exec",
-        data: {
-        	"Would you sign up for a 30 minute shift as bartender with a partner?" : var1, 
-        	"Anything else?" : var2,
-        	"What is your name?": var3,
-        	"What is your mailing address?": var4
-        },
-        type: "POST",
-        dataType: "xml",
-        statusCode: {
-            0: function (){
-            	thanksForm();
-                //Success message
-            },
-            200: function (){
-               thanksForm();
-                //Success Message
-            }
-        }
-    });
-	});
+
+	var enterRsvpMode = function($form, match, switchMode) {
+		$form.html('');
+		$form.off('submit');
+
+		var self = this;
+
+		var headingText = '';
+		var names = match.split(', ').filter(function(name) { return name });
+		var i = 1;
+		var $inputs = names.map(function(name) {
+			if(i > 1) {
+				if(i === names.length) {
+					headingText += ' and ';
+				} else {
+					headingText += ', ';
+				}
+			}
+			headingText += name;
+			i++;
+			return $('<input type="checkbox" checked="checked" name="' + name + '" value="' + name + '"/>');
+		});
+		var $switch = $('<div class="switch-text" />')
+			.append('(Not you? ')
+			.append(
+				$('<a href="#">Click here</a>')
+					.on('click', function(e) {
+						e.preventDefault();
+						switchMode($form, enterRsvpMode);
+					})
+			).append(' to find your reservation)');
+
+		// Checkboxes
+		var $checkboxes = $('<div class="checkboxes" />')
+			.append('<label>Check all that are attending:<label>');
+		$inputs.map(function(input) {
+			$checkboxes.append(
+				$('<label>').append(
+					$('<div />').append(input).append(' ' + input[0].name)
+				)
+			).append($switch);
+		});
+
+		// PLus one
+		var $plusinput = $('<input type="text" />');
+		var $plusinputwrap = $('<div class="guest" />')
+			.append('<label class="form-label">Your guest\'s name</label>')
+			.append($('<div />').append($plusinput))
+			.hide();
+		var $plusck3 = $('<label />')
+			.append($('<input type="checkbox"/>').on('change', function() {
+				$plusinputwrap.toggle();
+			})).append(' I promise you\'ll want to feed and meet her/him').hide();
+		var $plusck2 = $('<label />')
+			.append($('<input type="checkbox"/>').on('change', function() {
+				$plusck3.toggle();
+			})).append(' For real though I need one, I\'m not just lonely').hide();
+		var $plusck1 = $('<label/>')
+			.append($('<input type="checkbox"/>').on('change', function() {
+				$plusck2.toggle();
+			})).append(' I need a plus one');
+		var $plusOne = $('<div class="plus-one" />')
+			.append($('<div />').append($plusck1))
+			.append($('<div />').append($plusck2))
+			.append($('<div />').append($plusck3))
+			.append($plusinputwrap);
+
+		var $note = $('<textarea name="note" />'); 
+
+		function thanksForm() {
+			$form.removeClass('posting');
+			var label = $('#rsvp-wrap > p:first-child');
+			label.siblings().hide();
+			label.after('<p>Thanks for the information, talk to you soon!</p>');
+		}
+
+		function submit(e) {
+			e.preventDefault();
+			$form.addClass('posting');
+			var notgoing = [];
+			var going = $inputs.filter(function(input) {
+				if(!input[0].checked) {
+					notgoing.push(input[0].name);
+					return false;
+				}
+				return true;
+			}).map(function(input) { 
+				return input[0].name 
+			});
+			$.ajax({
+	        url: "https://script.google.com/macros/s/AKfycbwJSoCEJrKTFzCLQqPBiZwWJDqKFASAcF8mU5ClRawACh4Ub_zw/exec",
+	        data: {
+						"Coming to wedding": going.join(','),
+						"Not coming to wedding": notgoing.join(','),
+						"Party Count": going.length,
+						"Plus one": $plusinput.val(),
+						"Notes": $note.val()
+	        },
+	        type: "POST",
+	        dataType: "xml",
+	        statusCode: {
+	            0: function (){
+	            	thanksForm();
+	                //Success message
+	            },
+	            200: function (){
+	               thanksForm();
+	                //Success Message
+	            }
+	        }
+	    });
+    }
+
+		var $submit = $('<a href="#" id="rsvp-submit" class="btn">Submit RSVP</a>')
+			.on('click', submit);
+
+		$form
+			// .append('<h4>RSVP for ' + headingText + '</h4>')
+			.append($checkboxes)
+			.append($plusOne)
+			.append(
+				$('<div class="notewrap" />')
+					.append('<label class="form-label">Anything else?</label>')
+					.append($note)
+				).append($submit);
+	};
+	
+
+	var theform = $('<form id="rsvp" target="_self" />')
+
+	$('#rsvp-wrap')
+		.append('<p>(FYI: this info is only going to us)</p>')
+		.append(theform);
+
+	enterSearchMode(theform, enterRsvpMode);
 
 }(jQuery));
