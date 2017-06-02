@@ -356,7 +356,7 @@ var $sitehead = $('#site-head');
 						"Coming to wedding": going.join(','),
 						"Not coming to wedding": notgoing.join(','),
 						"Party Count": going.length,
-						"Plus one": $plusinput.val(),
+						// "Plus one": '',
 						"Notes": $note.val()
 	        },
 	        type: "POST",
@@ -380,7 +380,7 @@ var $sitehead = $('#site-head');
 		$form
 			// .append('<h4>RSVP for ' + headingText + '</h4>')
 			.append($checkboxes)
-			.append($plusOne)
+			// .append($plusOne)
 			.append(
 				$('<div class="notewrap" />')
 					.append('<label class="form-label">Anything else?</label>')
