@@ -2,6 +2,63 @@
 @import "bourbon-loader";
 @import "vars";
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Bartender section
+
+.page-bartender-signup {
+  .post.page {
+    padding-top: 0;
+  }
+
+  .post-header {
+    display: none;
+  }
+}
+
+.handle {
+  padding: 0 5px;
+  margin-right: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: move;
+}
+
+.person {
+  margin-bottom: 2px;
+}
+
+.drag-wrapper {
+  .time-item-wrap {
+    margin-bottom: 10px;
+  }
+  .container {
+    background: rgba(92, 184, 92, 0.1);
+    padding: 10px;
+    min-height: 60px;
+
+    &.disabled {
+      background: rgba(201, 48, 44, 0.1);
+    }
+  }
+
+  .time-section {
+    float: left;
+  }
+
+  .list-section {
+    float: right;
+  }
+
+  .time-section, .list-section {
+    margin: 2%;
+    width: 46%;
+  }
+}
+
 
 // Form
 

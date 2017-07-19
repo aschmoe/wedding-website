@@ -1,3 +1,43 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.page-bartender-signup .post.page {
+  padding-top: 0; }
+
+.page-bartender-signup .post-header {
+  display: none; }
+
+.handle {
+  padding: 0 5px;
+  margin-right: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: move; }
+
+.person {
+  margin-bottom: 2px; }
+
+.drag-wrapper .time-item-wrap {
+  margin-bottom: 10px; }
+
+.drag-wrapper .container {
+  background: rgba(92, 184, 92, 0.1);
+  padding: 10px;
+  min-height: 60px; }
+  .drag-wrapper .container.disabled {
+    background: rgba(201, 48, 44, 0.1); }
+
+.drag-wrapper .time-section {
+  float: left; }
+
+.drag-wrapper .list-section {
+  float: right; }
+
+.drag-wrapper .time-section, .drag-wrapper .list-section {
+  margin: 2%;
+  width: 46%; }
+
 input[type="text"],
 textarea {
   padding: 2px 5px;

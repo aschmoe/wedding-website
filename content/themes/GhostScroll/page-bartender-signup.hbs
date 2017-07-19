@@ -1,0 +1,69 @@
+{{!< default}}
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css">
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        {{! Each post has the blog logo at the top, with a link back to the home page }}
+        <header class="post-header">
+            <a id="blog-logo" href="{{@blog.url}}">
+                {{#if @blog.logo}}
+                    <img src="{{@blog.logo}}" alt="Blog Logo" />
+                {{else}}
+                    {{@blog.title}}
+                {{/if}}
+            </a>
+        </header>
+
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+
+        {{! Everything below outputs content of the the post which has been published }}
+
+        <h1 class="post-title">{{{title}}}</h1>
+
+        <section class="post-content">
+
+          <div class="drag-wrapper clearfix">
+            <div class="list-section">
+              <div class="time-item-wrap">
+                <label>Place me</label>
+                <div id='bucket' data-time="0" class='container'></div>
+              </div>
+            </div>
+            <div id="time-section" class="time-section">
+            </div>
+          </div>
+        </section>
+
+        <footer class="post-footer">
+
+        </footer>
+
+        {{/post}}
+
+    </article>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.3/firebase-messaging.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAQxcxbNChO21inp1SKnHfRkY5EEfFs-s0",
+        authDomain: "bartenders-844fa.firebaseapp.com",
+        databaseURL: "https://bartenders-844fa.firebaseio.com",
+        projectId: "bartenders-844fa",
+        storageBucket: "bartenders-844fa.appspot.com",
+        messagingSenderId: "207417592709"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src='{{asset "js/dragula/dragula.js"}}'></script>
+    <script type="text/javascript" src='{{asset "js/bartenders.js"}}'></script>
+</main>
