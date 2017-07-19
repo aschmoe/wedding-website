@@ -70,9 +70,9 @@ firebase.auth().signInAnonymously().catch(function(error) {
   $(window).load(function() {
 
     var drake = dragula([$('#bucket')[0]], { 
-      moves: function (el, container, handle) {
-        return handle.classList.contains('handle');
-      },
+      // moves: function (el, container, handle) {
+      //   return handle.classList.contains('handle');
+      // },
       accepts: function(el, target, source, sibling) {
         if(target.attributes['data-time'].value === '0') {
           return true;
