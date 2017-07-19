@@ -88,19 +88,19 @@ firebase.auth().signInAnonymously().catch(function(error) {
     var times = [ 
       {
         time: '4:00',
-        message: 'Outside'
+        message: '(Outside)'
       },  
       {
         time: '4:20',
-        message: 'Outside'
+        message: '(Outside)'
       },  
       {
         time: '4:40',
-        message: 'Outside'
+        message: '(Outside)'
       },  
       {
         time: '5:00',
-        message: '15 minute shift'
+        message: '(Outside) 15 minute shift'
       },
       { 
         time: '5:15 - 7:30',
@@ -108,46 +108,60 @@ firebase.auth().signInAnonymously().catch(function(error) {
         disabled: true
       },
       { 
-        time: '7:20'
+        time: '7:20',
+        message: '(Upstairs) make sure bar set'
       }, 
       {
-        time: '7:40'
+        time: '7:40',
+        message: '(Upstairs)'
       },  
       {
-        time: '8:00'
+        time: '8:00',
+        message: '(Upstairs)'
       },  
       {
-        time: '8:20'
+        time: '8:20',
+        message: '(Upstairs)'
       },  
       {
-        time: '8:40'
+        time: '8:40',
+        message: '(Upstairs)'
       },  
       {
-        time: '9:00'
+        time: '9:00',
+        message: '(Upstairs)'
       },  
       {
-        time: '9:20'
+        time: '9:20',
+        message: '(Upstairs)'
       },  
       {
-        time: '9:40'
+        time: '9:40',
+        message: '(Upstairs)'
       },  
       {
-        time: '10:00'
+        time: '10:00',
+        message: '(Upstairs)'
       }, 
       {
-        time: '10:20'
+        time: '10:20',
+        message: '(Upstairs)'
       }, 
       {
-        time: '10:40'
+        time: '10:40',
+        message: '(Upstairs)'
       }, 
       {
-        time: '11:00'
+        time: '11:00',
+        message: '(Upstairs)'
       }, 
       {
-        time: '11:20'
-      }, 
+        time: '11:20',
+        message: '(Upstairs)'
+      },
       {
-        time: '11:40'
+        time: '11:40',
+        message: '(Upstairs)'
       },  
       {
         time: '12:00',
