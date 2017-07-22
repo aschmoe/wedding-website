@@ -6,21 +6,21 @@
     // Setting up draggables
     // -----------------------
 
-    var drake = dragula([$('#bucket')[0]], { 
-      // moves: function (el, container, handle) {
-      //   return handle.classList.contains('handle');
-      // },
-      accepts: function(el, target, source, sibling) {
-        if(target.attributes['data-time'].value === '0') {
-          return true;
-        }
-        return !target.children.length || target.children.length < 2;
-      }
-    })
-    .on('drop', function (el, container) {
-      // console.log($(el).data('key'), $(container).data('time'));
-      updateContact($(el).data('key'), $(container).data('time'));
-    });
+    // var drake = dragula([$('#bucket')[0]], { 
+    //   // moves: function (el, container, handle) {
+    //   //   return handle.classList.contains('handle');
+    //   // },
+    //   accepts: function(el, target, source, sibling) {
+    //     if(target.attributes['data-time'].value === '0') {
+    //       return true;
+    //     }
+    //     return !target.children.length || target.children.length < 2;
+    //   }
+    // })
+    // .on('drop', function (el, container) {
+    //   // console.log($(el).data('key'), $(container).data('time'));
+    //   updateContact($(el).data('key'), $(container).data('time'));
+    // });
 
     var times = [ 
       {
@@ -117,7 +117,7 @@
         $('<div class="time-item-wrap"><label>' + label + '</label></div>').append($container)
       );
       if(!timeObj.disabled) {
-        drake.containers.push($container[0]);
+        // drake.containers.push($container[0]);
       }
     });
 
@@ -203,7 +203,7 @@
       console.log( contact );
       var html = '';
       html += '<div class="person">';
-        html += '<span class="handle">+</span>';
+        // html += '<span class="handle">+</span>';
         html += '<span>'+contact.name+'</span>';
       html += '</div>';
       return $(html).data({ 'key': key });
